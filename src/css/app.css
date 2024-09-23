@@ -6,9 +6,10 @@
 }
 
 .app {
+    min-height: 100vh;
     position: relative;
     background-color: #f0f0f0;
-    padding: 0 150px;
+    padding-bottom: 10px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2370c5cf' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -16,11 +17,11 @@ menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 20px 0 20px;
     height: 100px;
 }
 
-menu img {
+menu a, menu a img {
     height: 100%;
 }
 
@@ -31,32 +32,46 @@ menu img {
     height: 40px;
     border: 0;
     cursor: pointer;
+    width: auto;
+}
+
+.menu img {
+    height: 100%;
 }
 
 .info-div {
     width: 100%;
     text-align: center;
     font-weight: 700;
+    margin-top: 20px;
 }
 
 .category {
     width: 100%;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 20% 0 20%;
 }
 
 .category h1 {
     text-transform: uppercase;
     font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.text-to-copy-container.text .text-to-copy {
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
 }
 
 .text-to-copy-container {
-    /* grid que se adapta ao tamanho da tela e esta um do lado do outro */
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(100px, 250px));
-    gap: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     place-items: center;
     justify-content: center;
+    justify-items: stretch;
     grid-auto-flow: row dense;
     gap: 20px;
 }
@@ -64,12 +79,91 @@ menu img {
 .text-to-copy {
     text-align: center;
     background-color: white;
-    width: 250px;
     padding: 15px 15px;
-    border-radius: 30px;
+    height: 70px;
+    min-width: 100px;
+    border-radius: 50px;
     border: black 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    font-size: larger;
+}
+
+.text-to-copy:hover {
+    border: gray 2px solid;
+}
+
+.copied {
+    color: white;
+    visibility: hidden;
+    position: absolute;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    padding-top: 25px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.menu-container ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.more {
+    border: 0;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.menu-container a, footer a {
+    text-decoration: underline;
+    color: inherit;
+  }
+  
+  .menu-container a:visited {
+    color: inherit;
+  }
+  
+  .menu-container a:hover {
+    color: blue;
+  }
+
+/* media query */
+@media screen and (max-width: 768px) {
+    .menu-container ul {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu-container li {
+        white-space: nowrap;
+      }
+
+    .menu {
+        height: 30px;
+    }
+      
+    menu {
+        height: 90px;
+    }
 }
