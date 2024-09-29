@@ -108,6 +108,7 @@ footer {
     align-items: center;
     font-size: small;
     padding-top: 25px;
+    text-align: center;
 }
 
 .menu-container {
@@ -145,6 +146,10 @@ footer {
     color: blue;
   }
 
+  .original {
+    color: #000;
+  }
+
 /* media query */
 @media screen and (max-width: 768px) {
     .menu-container ul {
@@ -165,5 +170,13 @@ footer {
       
     menu {
         height: 90px;
+    }
+
+    .text-to-copy {
+        padding: 25px 20px;
+    }
+
+    .text-to-copy-container.text .text-to-copy {
+        min-height: 350px;
     }
 }
