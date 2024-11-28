@@ -70,7 +70,7 @@ O deploy do projeto está disponível em: [https://copiao.netlify.app/](https://
 
 ## Tecnologias ★
 ![npm](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![npm](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![npm](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 
 ## ⚙ Instalação ★
 Siga os passos abaixo para configurar o projeto localmente:
